@@ -471,7 +471,7 @@ class BaseAlchemyBackend(BaseSQLBackend):
             warnings.filterwarnings(
                 "ignore", message="Did not recognize type", category=sa.exc.SAWarning
             )
-            warnings.simplefilter(
+            warnings.filterwarnings(
                 "ignore", category=sa.exc.SAWarning
             )
             table = sa.Table(
