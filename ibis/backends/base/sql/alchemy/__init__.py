@@ -472,7 +472,7 @@ class BaseAlchemyBackend(BaseSQLBackend):
                 "ignore", message="Did not recognize type", category=sa.exc.SAWarning
             )
             warnings.filterwarnings(
-                "ignore", category=sa.exc.SAWarning
+                "ignore", message="index key", category=sa.exc.SAWarning
             )
             table = sa.Table(
                 name,
